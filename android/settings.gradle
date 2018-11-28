@@ -1,0 +1,3 @@
+rootProject.name = 'ozone'
+
+include ':app'
