@@ -8,6 +8,7 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, StatusBar} from 'react-native';
+import Login from './features/login/Login';
 
 
 const instructions = Platform.select({
@@ -22,15 +23,7 @@ export default class App extends Component<Props> {
 
   render() {
     return (
-      <View style={styles.container}>
-        <StatusBar 
-          barStyle="light-content"
-          backgroundColor="#fc8632">
-        </StatusBar>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-      </View>
+     <Login />
     );
   }
 }
@@ -40,7 +33,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#fc8632',
+    backgroundColor: '#F5FCFF',
   },
   welcome: {
     fontSize: 20,
