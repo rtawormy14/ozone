@@ -7,7 +7,9 @@ class Notifikasi extends React.Component {
         return ( 
             <View>
                 <Text>List Notifikasi</Text>
-                <Button title="detail Notifikasi"></Button>
+                <Button title="detail Notifikasi"
+                    onPress={() => this.props.navigation.navigate('DetailNotifikasi')}
+                ></Button>
             </View>
          );
     }

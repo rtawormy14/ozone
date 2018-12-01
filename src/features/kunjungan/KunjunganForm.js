@@ -7,7 +7,9 @@ class KunjunganForm extends React.Component {
         return ( 
             <View>
                 <Text>Form Catat Kunjungan</Text>
-                <Button title="Simpan"></Button>
+                <Button title="Simpan"
+                    onPress={() => this.props.navigation.goBack()}
+                ></Button>
             </View>
          );
     }

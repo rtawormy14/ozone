@@ -1,13 +1,13 @@
 import React from 'react';
 import { Button, Text, View } from 'react-native';
 
-class RegisterMitra extends React.Component {
+class UmkmForm extends React.Component {
     state = {  }
     render() { 
         return ( 
             <View>
-                <Text>Registrasi</Text>
-                <Button title="Simpan"
+                <Text>Form tambah UMKM</Text>
+                <Button title="simpan"
                     onPress={() => this.props.navigation.goBack()}
                 ></Button>
             </View>
@@ -15,4 +15,4 @@ class RegisterMitra extends React.Component {
     }
 }
  
-export default RegisterMitra;
+export default UmkmForm;

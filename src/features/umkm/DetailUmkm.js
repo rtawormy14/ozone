@@ -6,9 +6,7 @@ class DetailUmkm extends React.Component {
     render() { 
         return ( 
             <View>
-                <Text>List Mitra</Text>
-                <Button title="detail mitra"></Button>
-
+                <Text>Detail Mitra</Text>
             </View>
          );
     }

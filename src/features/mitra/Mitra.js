@@ -7,7 +7,9 @@ class Mitra extends React.Component {
         return ( 
             <View>
                 <Text>List Mitra</Text>
-                <Button title="detail mitra"></Button>
+                <Button title="detail mitra"
+                    onPress={() => this.props.navigation.navigate('DetailMitra')}
+                ></Button>
             </View>
          );
     }

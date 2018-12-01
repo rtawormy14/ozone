@@ -7,7 +7,9 @@ class Kunjungan extends React.Component {
         return ( 
             <View>
                 <Text>List Kunjungan</Text>
-                <Button title="Catat Kunjungan Baru"></Button>
+                <Button title="Catat Kunjungan Baru"
+                    onPress={() => this.props.navigation.navigate('KunjunganForm')}
+                ></Button>
             </View>
          );
     }

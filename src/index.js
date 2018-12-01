@@ -15,7 +15,7 @@ import DetailMitra from './features/mitra/DetailMitra'
 import Notifikasi from './features/notifikasi/Notifikasi'
 import DetailNotifikasi from './features/notifikasi/DetailNotifikasi'
 import Search from './features/search/Search'
-import Umkm from './features/umkm/Umkm'
+import UmkmForm from './features/umkm/UmkmForm'
 import DetailUmkm from './features/umkm/DetailUmkm'
 import Help from './features/drawer/Help'
 import Setting from './features/drawer/Setting'
@@ -115,7 +115,7 @@ const HomeStack = createStackNavigator({
   RegisterMitra : {screen : RegisterMitra },
   Mitra: { screen: Mitra },
   DetailMitra: { screen: DetailMitra },
-  Umkm: { screen: Umkm },
+  UmkmForm: { screen: UmkmForm },
   DetailUmkm: { screen: DetailUmkm },
   Notifikasi: { screen: Notifikasi },
   DetailNotifikasi: { screen: DetailNotifikasi },
