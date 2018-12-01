@@ -1,17 +1,17 @@
 import React from 'react';
 import { Button, Text, View } from 'react-native';
 
-class NotifikasiPage extends Component {
+class DetailUmkm extends React.Component {
     state = {  }
     render() { 
         return ( 
             <View>
-                <Text>List Notifikasi</Text>
+                <Text>List Mitra</Text>
+                <Button title="detail mitra"></Button>
+
             </View>
-            <Button title="detail notifikasi"
-            />
          );
     }
 }
  
-export default NotifikasiPage;
+export default DetailUmkm;

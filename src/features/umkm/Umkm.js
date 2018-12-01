@@ -1,17 +1,16 @@
 import React from 'react';
 import { Button, Text, View } from 'react-native';
 
-class DetailUmkmPage extends Component {
+class Umkm extends React.Component {
     state = {  }
     render() { 
         return ( 
             <View>
                 <Text>List Mitra</Text>
+                <Button title="detail mitra"></Button>
             </View>
-            <Button title="detail mitra"
-            />
          );
     }
 }
  
-export default DetailUmkmPage;
+export default Umkm;

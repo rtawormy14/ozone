@@ -1,12 +1,9 @@
 import React, { Component } from 'react'
-
 import { View, Text, TextInput, TouchableOpacity, Alert, Button ,StyleSheet ,StatusBar} from 'react-native';
-
-const onButtonPress = () => {
-    Alert.alert('Button has been pressed!');
-};
+import { createStackNavigator, createAppContainer, StackActions, NavigationActions } from "react-navigation";
 
 class LoginFrom extends Component {
+
     render() {
         return (
             <View style={styles.container}>
@@ -26,7 +23,9 @@ class LoginFrom extends Component {
                            placeholderTextColor='rgba(225,225,225,0.7)' 
                            secureTextEntry/>
                  {/*   <Button onPress={onButtonPress} title = 'Login' style={styles.loginButton} /> */}
-              <TouchableOpacity style={styles.buttonContainer} onPress={onButtonPress}>
+              <TouchableOpacity style={styles.buttonContainer} 
+                onPress={() => this.props.navigation.navigate('Home')}
+               >
                     <Text  style={styles.buttonText}>LOGIN</Text>
                 </TouchableOpacity> 
             </View>

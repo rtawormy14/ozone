@@ -1,17 +1,16 @@
 import React from 'react';
 import { Button, Text, View } from 'react-native';
 
-class KunjunganPage extends Component {
+class Notifikasi extends React.Component {
     state = {  }
     render() { 
         return ( 
             <View>
-                <Text>List Kunjungan</Text>
+                <Text>List Notifikasi</Text>
+                <Button title="detail Notifikasi"></Button>
             </View>
-            <Button title="Catat Kunjungan Baru"
-            />
          );
     }
 }
  
-export default KunjunganPage;
+export default Notifikasi;

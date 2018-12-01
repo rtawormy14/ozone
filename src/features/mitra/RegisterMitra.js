@@ -1,17 +1,15 @@
 import React from 'react';
 import { Button, Text, View } from 'react-native';
 
-class SearchPage extends Component {
+class RegisterMitra extends React.Component {
     state = {  }
     render() { 
         return ( 
             <View>
-                <Text>Find Mitra</Text>
+                <Text>Registrasi</Text>
             </View>
-            <Button title="detail mitra"
-            />
          );
     }
 }
  
-export default SearchPage;
+export default RegisterMitra;
