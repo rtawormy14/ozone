@@ -4,7 +4,6 @@ import { createStackNavigator,createDrawerNavigator, createAppContainer } from '
 
 
 import Login from './features/login/Login'
-import LoginForm from './features/login/LoginForm'
 import Register from './features/login/Register'
 import HomeJRM from './features/home/HomeJRM'
 import Kunjungan from './features/kunjungan/Kunjungan'
@@ -120,6 +119,17 @@ const HomeStack = createStackNavigator({
   Notifikasi: { screen: Notifikasi },
   DetailNotifikasi: { screen: DetailNotifikasi },
   Search: { screen: Search },
+},{
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: '#ff9000',
+      },
+      
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    }
 });
 
 const LoginStack = createStackNavigator({

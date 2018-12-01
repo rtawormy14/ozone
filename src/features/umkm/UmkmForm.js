@@ -2,6 +2,11 @@ import React from 'react';
 import { Button, Text, View } from 'react-native';
 
 class UmkmForm extends React.Component {
+    static navigationOptions = ({ navigation }) => {
+        return {
+          title: 'Tambah UMKM',
+        }
+    };
     state = {  }
     render() { 
         return ( 

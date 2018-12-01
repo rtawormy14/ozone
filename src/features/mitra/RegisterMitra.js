@@ -2,6 +2,11 @@ import React from 'react';
 import { Button, Text, View } from 'react-native';
 
 class RegisterMitra extends React.Component {
+    static navigationOptions = ({ navigation }) => {
+        return {
+          title: 'Registrasi Mitra',
+        }
+    };
     state = {  }
     render() { 
         return ( 

@@ -2,13 +2,16 @@ import React from 'react';
 import { Button, Text, View } from 'react-native';
 
 class Setting extends React.Component {
+    static navigationOptions = ({ navigation }) => {
+        return {
+          title: 'Pengaturan',
+        }
+    };
     state = {  }
     render() { 
         return ( 
             <View>
-                <Text>Form Catat Kunjungan</Text>
-            <Button title="Simpan"
-            />
+                <Text>Pengaturan</Text>
             </View>
          );
     }

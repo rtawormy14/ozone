@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { View, Text,Image, TextInput, TouchableOpacity,KeyboardAvoidingView, Alert, Button ,StyleSheet ,StatusBar} from 'react-native';
 
 export default class Login extends Component {
+
+
     static navigationOptions = ({ navigation }) => {
         return {
             header : null,

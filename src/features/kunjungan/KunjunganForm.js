@@ -2,6 +2,12 @@ import React from 'react';
 import { Button, Text, View } from 'react-native';
 
 class KunjunganForm extends React.Component {
+    static navigationOptions = ({ navigation }) => {
+        return {
+          title: 'Catat Kunjungan',
+        }
+    };
+
     state = {  }
     render() { 
         return ( 
