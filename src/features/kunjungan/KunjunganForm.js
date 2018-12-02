@@ -1,6 +1,6 @@
 import React from 'react';
 import { Header } from 'react-navigation';
-import { Button, Text, ScrollView, View, StyleSheet, TouchableOpacity, KeyboardAvoidingView, StatusBar, TextInput} from 'react-native';
+import { Button, Text, Alert, ScrollView, View, StyleSheet, TouchableOpacity, KeyboardAvoidingView, StatusBar, TextInput} from 'react-native';
 import { Icon } from 'react-native-elements'
 
 import styles from '../../styles/styles'
@@ -11,6 +11,34 @@ class KunjunganForm extends React.Component {
           title: 'Catat Kunjungan',
         }
     };
+
+    alert = (msg) => {
+        console.log(msg)
+    }
+
+    onConfirm = () => {
+        this.alert('onConfirm');
+        Alert.alert(
+            'Sukses',
+            'Catatan kunjungan berhasil disimpan',
+            [
+                { text : 'OK', onPress :() => this.props.navigation.goBack() },
+            ]
+        )
+      }
+
+    onSubmit = () => {
+        this.alert(' onSubmit');
+        Alert.alert(
+            'Tambah Catatan Kunjungan',
+            'Apakah anda yakin untuk menambakan catatan kunjungan ini?',
+            [
+                { text : 'Batal'},
+                { text : 'Iya', onPress :() => this.onConfirm() },
+            ]
+        )    
+
+    } 
 
     state = {  }
     render() { 
@@ -113,8 +141,7 @@ class KunjunganForm extends React.Component {
                             </View>
                         </View>
                         <View style={styles.buttonLayout}>
-                            <TouchableOpacity style={styles.buttonPrimary} 
-                                    onPress={() => this.props.navigation.goBack()}>
+                            <TouchableOpacity style={styles.buttonPrimary} onPress={() => this.onSubmit()}>
                                 <Text  style={styles.buttonText}>Simpan</Text>
                             </TouchableOpacity> 
                         </View>
