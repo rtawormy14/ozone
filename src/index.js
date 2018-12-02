@@ -130,7 +130,7 @@ const HomeStack = createStackNavigator({
         fontWeight: 'bold',
       },
     },
-    initialRouteName : "KunjunganForm",
+    initialRouteName : 'KunjunganForm',
 });
 
 const LoginStack = createStackNavigator({
@@ -178,7 +178,7 @@ const RootStack = createStackNavigator(
   }
 );
 
-const AppContainer = createAppContainer(RootStack);
+const AppContainer = createAppContainer(HomeStack);
 
 export default class App extends React.Component {
   render() {
