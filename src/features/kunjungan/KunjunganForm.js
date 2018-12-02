@@ -3,7 +3,7 @@ import { Header } from 'react-navigation';
 import { Button, Text, ScrollView, View, StyleSheet, TouchableOpacity, KeyboardAvoidingView, StatusBar, TextInput} from 'react-native';
 import { Icon } from 'react-native-elements'
 
-import styles from './../../styles/styles'
+import styles from '../../styles/styles'
 
 class KunjunganForm extends React.Component {
     static navigationOptions = ({ navigation }) => {
@@ -22,7 +22,7 @@ class KunjunganForm extends React.Component {
                     backgroundColor="#ff9000"
                     barStyle="light-content"
                 />
-                <View style={styles.formContainer}>
+                <ScrollView contentContainerStyle={styles.formContainer}>
                     <View style={styles.formLayout}>
                         <View>
                             <View style={styles.labelContainer}>
@@ -118,7 +118,7 @@ class KunjunganForm extends React.Component {
                             <Text  style={styles.buttonText}>Simpan</Text>
                         </TouchableOpacity> 
                     </View>
-                </View>
+                </ScrollView>
             </KeyboardAvoidingView>
             </ScrollView>
             
