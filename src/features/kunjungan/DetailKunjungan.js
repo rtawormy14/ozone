@@ -3,18 +3,22 @@ import { Header } from 'react-navigation';
 import { Image, Text, Alert, ScrollView, View, StyleSheet, TouchableOpacity, KeyboardAvoidingView, StatusBar, TextInput} from 'react-native';
 import { Icon } from 'react-native-elements'
 
+import {CustomButton} from '../../components/input/Button';
+
+
 const img = './../../assets/images/image_detail_kunjungan.png';
-class DetailUmkm extends React.Component {
+
+class DetailKunjungan extends React.Component {
     static navigationOptions = ({ navigation }) => {
         return {
-          title: 'Detail UMKM',
+          title: 'Detail Kunjungan',
         }
     };
 
     state = {  }
     render() { 
         return ( 
-            <ScrollView contentContainerStyle={styles.container}>
+            <View style={styles.container}>
                     <StatusBar
                         translucent={false}
                         backgroundColor="#ff9000"
@@ -68,62 +72,36 @@ class DetailUmkm extends React.Component {
                         </View>
                         <View style={styles.rowContainer}>
                             <View style={styles.labelContainer}>
-                                <Text  style={styles.label}>Status Kemitraan</Text>
+                                <Text  style={styles.label}>Hasil Kunjungan</Text>
                             </View>
                             <View style={styles.contentContainer}>
-                                <View style={{flexDirection:'row'}}>
-                                    <Text  style={styles.content}>Non Mitra</Text>
-                                    <Text  style={{
-                                        fontSize : 16,
-                                        color: '#00bb33',
-                                        textAlign: 'justify',
-                                    }}> - Potensial</Text>
-                                </View>
-                                
-                            </View>
-                        </View>
-                        <View style={styles.rowContainer}>
-                            <View style={styles.labelContainer}>
-                                <Text  style={styles.label}>Kunjungan JRM Terakhir</Text>
-                            </View>
-                            <View style={styles.contentContainer}>
-                                <Text  style={styles.content}>27 November 2018</Text>
-                            </View>
-                        </View>
-                        <View style={styles.rowContainer}>
-                            <View style={styles.labelContainer}>
-                                <Text  style={styles.label}>Tanggal Bergabung</Text>
-                            </View>
-                            <View style={styles.contentContainer}>
-                                <Text  style={styles.content}>30 November 2018</Text>
-                            </View>
-                        </View>
-                        <View style={styles.rowContainer}>
-                            <View style={styles.labelContainer}>
-                                <Text  style={styles.label}>No. Rekening Kredit BNI</Text>
-                            </View>
-                            <View style={styles.contentContainer}>
-                                <Text  style={styles.content}>1234567890</Text>
+                                <Text  style={{
+                                    fontSize : 16,
+                                    color: '#00bb33',
+                                    textAlign: 'justify',
+                                }}>Potensial</Text>
                             </View>
                         </View>
                     </ScrollView>
-            </ScrollView>
+            </View>
+            
          );
     }
 }
  
-export default DetailUmkm;
+export default DetailKunjungan;
+
 
 const styles = StyleSheet.create({
     container: {
-        flexGrow: 1, 
+        flex: 1, 
         backgroundColor: '#f0f0f0',
     },
     imageContainer :{
         height : 150,
     },
     formContainer: {
-        flexGrow : 1,
+        flex : 1,
         padding: 20,
     },
     rowContainer :{

@@ -1,9 +1,10 @@
 import React from 'react';
 import { Header } from 'react-navigation';
-import { Button, Text, Alert, ScrollView, View, StyleSheet, TouchableOpacity, KeyboardAvoidingView, StatusBar, TextInput} from 'react-native';
+import { Text, Alert, ScrollView, View, StyleSheet, TouchableOpacity, KeyboardAvoidingView, StatusBar, TextInput} from 'react-native';
 import { Icon } from 'react-native-elements'
 
-import styles from '../../styles/styles'
+import {CustomButton} from '../../components/input/Button';
+import styles from '../../styles/styles' 
 
 class KunjunganForm extends React.Component {
     static navigationOptions = ({ navigation }) => {
@@ -141,9 +142,10 @@ class KunjunganForm extends React.Component {
                             </View>
                         </View>
                         <View style={styles.buttonLayout}>
-                            <TouchableOpacity style={styles.buttonPrimary} onPress={() => this.onSubmit()}>
-                                <Text  style={styles.buttonText}>Simpan</Text>
-                            </TouchableOpacity> 
+                            <CustomButton style={styles.buttonPrimary} onPress={() => this.onSubmit()}
+                                text="Simpan"
+                            >
+                            </CustomButton> 
                         </View>
                     </ScrollView>
                 </KeyboardAvoidingView>

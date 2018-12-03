@@ -3,11 +3,13 @@ import { Button, Text, View } from 'react-native';
 import { createStackNavigator,createDrawerNavigator, createAppContainer } from 'react-navigation'; // 1.0.0-rc.2
 
 
+import Splash from './features/login/Splash'
 import Login from './features/login/Login'
 import Register from './features/login/Register'
 import HomeJRM from './features/home/HomeJRM'
 import Kunjungan from './features/kunjungan/Kunjungan'
 import KunjunganForm from './features/kunjungan/KunjunganForm'
+import DetailKunjungan from './features/kunjungan/DetailKunjungan'
 import RegisterMitra from './features/mitra/RegisterMitra'
 import Mitra from './features/mitra/Mitra'
 import DetailMitra from './features/mitra/DetailMitra'
@@ -105,48 +107,6 @@ class ModalScreen2 extends React.Component {
   }
 }
 
-// not used
-// but example of option 2 in the github issue
-const HomeStack = createStackNavigator({
-  HomeJRM: { screen: HomeJRM, headerMode : "none" },
-  Kunjungan: { screen: Kunjungan },
-  KunjunganForm: { screen: KunjunganForm },
-  RegisterMitra : {screen : RegisterMitra },
-  Mitra: { screen: Mitra },
-  DetailMitra: { screen: DetailMitra },
-  UmkmForm: { screen: UmkmForm },
-  DetailUmkm: { screen: DetailUmkm },
-  Notifikasi: { screen: Notifikasi },
-  DetailNotifikasi: { screen: DetailNotifikasi },
-  Search: { screen: Search },
-},{
-    defaultNavigationOptions: {
-      headerStyle: {
-        backgroundColor: '#ff9000',
-      },
-      
-      headerTintColor: '#fff',
-      headerTitleStyle: {
-        fontWeight: 'bold',
-      },
-    },
-    initialRouteName : 'Kunjungan',
-});
-
-const LoginStack = createStackNavigator({
-  Login :{
-    screen : Login,
-  },
-  Register :{
-    screen : Register
-  }
-},{
-    headerMode: 'none',
-    navigationOptions: {
-        headerVisible: false,
-    }
-});
-
 const MainDrawer = createDrawerNavigator({
   Help: {
     screen: Help, // you may want to use a stack here too
@@ -158,11 +118,45 @@ const MainDrawer = createDrawerNavigator({
 
 const RootStack = createStackNavigator(
   {
-    Login: {
-      screen: LoginStack,
+    Splash: {
+      screen: createStackNavigator({
+        Splash :{ screen : Splash},
+        Login :{ screen : Login },
+        Register :{ screen : Register},
+      },{
+          headerMode: 'none',
+          navigationOptions: {
+              headerVisible: false,
+          }
+      })
     },
     Home: {
-      screen: HomeStack,
+      screen: createStackNavigator({
+        HomeJRM: { screen: HomeJRM, headerMode : "none" },
+        Kunjungan: { screen: Kunjungan },
+        KunjunganForm: { screen: KunjunganForm },
+        DetailKunjungan : {screen :DetailKunjungan},
+        RegisterMitra : {screen : RegisterMitra },
+        Mitra: { screen: Mitra },
+        DetailMitra: { screen: DetailMitra },
+        UmkmForm: { screen: UmkmForm },
+        DetailUmkm: { screen: DetailUmkm },
+        Notifikasi: { screen: Notifikasi },
+        DetailNotifikasi: { screen: DetailNotifikasi },
+        Search: { screen: Search },
+      },{
+          defaultNavigationOptions: {
+            headerStyle: {
+              backgroundColor: '#ff9000',
+            },
+            
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          },
+          initialRouteName : 'RegisterMitra',
+      }),
     },
 
     MainDrawer: {
@@ -170,7 +164,7 @@ const RootStack = createStackNavigator(
     },
   },
   {
-    initialRouteName : 'Login',
+    initialRouteName : 'Home',
     headerMode: 'none',
     navigationOptions: {
         headerVisible: false,

@@ -16,6 +16,33 @@ export default StyleSheet.create({
     buttonLayout: {
         flexGrow : 1,
     },
+
+    listContainer :{
+        flexGrow : 1,
+    },
+    listTitle :{
+        height : 50,
+        flexDirection:'row',
+        alignItems:'center',
+    },
+    titleText:{
+        fontSize : 16,
+        color: '#333',
+        textAlign: 'center',
+        fontWeight: 'bold',
+        paddingLeft : 10,
+    }, 
+    listContent :{
+    },
+    separatorDate :{
+        height : 30,
+        backgroundColor : '#bcbcbc',
+        padding : 5,
+        paddingLeft : 20,
+    },
+    separatorDateText :{
+        
+    },
     labelContainer : {
         height : 30,
         paddingTop : 5,
@@ -88,4 +115,10 @@ export default StyleSheet.create({
         textAlign: 'center',
         fontWeight: '700'
     }, 
+    link :{
+        color : '#0000EE',
+        textAlign: 'center',
+        textAlignVertical: "center",
+        padding : 10,
+    }
 });
