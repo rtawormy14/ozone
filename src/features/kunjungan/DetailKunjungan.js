@@ -3,8 +3,6 @@ import { Header } from 'react-navigation';
 import { Image, Text, Alert, ScrollView, View, StyleSheet, TouchableOpacity, KeyboardAvoidingView, StatusBar, TextInput} from 'react-native';
 import { Icon } from 'react-native-elements'
 
-import {CustomButton} from '../../components/input/Button';
-
 
 const img = './../../assets/images/image_detail_kunjungan.png';
 

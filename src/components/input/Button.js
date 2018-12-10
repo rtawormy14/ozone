@@ -16,6 +16,20 @@ class FloatingButton extends React.Component {
     }
 }
 
+class AddImageButton extends React.Component {
+    state = {  }
+    render() { 
+        return ( 
+            <TouchableOpacity
+                style={styles.imageButtonContainer}
+                onPress={this.props.onPress}
+            >
+            <Text style={styles.ImageIcon}>+</Text>
+            </TouchableOpacity>
+         );
+    }
+}
+
 class CustomButton extends React.Component {
     state = {  }
     render() { 
@@ -33,7 +47,8 @@ class CustomButton extends React.Component {
 
 export {
     FloatingButton,
-    CustomButton
+    CustomButton,
+    AddImageButton
 }
 export default CustomButton;
 
@@ -72,5 +87,17 @@ const styles = StyleSheet.create({
     floatIcon: { 
         fontSize: 40, 
         color: 'white' 
-    }
+    },
+    imageButtonContainer: { 
+        width: 150, 
+        height: 150, 
+        alignItems: 'center', 
+        justifyContent: 'center',  
+        backgroundColor: '#fff', 
+    }, 
+    ImageIcon: { 
+        fontSize: 100, 
+        color: '#666' ,
+        fontWeight : '100',
+    },
 })

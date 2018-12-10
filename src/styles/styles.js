@@ -68,6 +68,16 @@ export default StyleSheet.create({
         borderWidth:1,
         borderColor: '#ccc',
     },
+    pickerContainer :{
+        marginBottom : 10,
+        height:50,
+        flex : 1,
+        justifyContent: 'flex-start',
+        backgroundColor : '#fff',
+        borderRadius: 5,
+        borderWidth:1,
+        borderColor: '#ccc',
+    },
     iconContainer :{
         width:50,
         alignItems:'center',

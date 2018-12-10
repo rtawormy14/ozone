@@ -155,7 +155,7 @@ const RootStack = createStackNavigator(
               fontWeight: 'bold',
             },
           },
-          initialRouteName : 'RegisterMitra',
+          initialRouteName : 'HomeJRM',
       }),
     },
 
